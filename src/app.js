@@ -16,6 +16,7 @@ import Container from '@mui/material/Container';
 import { useEffect, useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PreviewModal from './PreviewModal';
+import Select from './select';
 
 export default function App() {
 
@@ -84,6 +85,7 @@ export default function App() {
                 </AppBar>
                 <main>
                     <Container sx={{ py: 8 }} maxWidth="md">
+                    <Select />
                     {loading ? <p>Loading...</p> : 
                     <Grid container spacing={4}>
                     {cards.map((card) => (
